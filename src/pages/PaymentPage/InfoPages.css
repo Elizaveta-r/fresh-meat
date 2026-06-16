@@ -1,0 +1,246 @@
+/* =========================
+   SECTIONS
+========================= */
+
+.info-page__section {
+  margin: 40px 0 20px;
+
+  font-size: 28px;
+  font-weight: 800;
+  color: #1b1b1d;
+}
+
+/* =========================
+   PAYMENT METHODS
+========================= */
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.payment-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  padding: 24px;
+
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+
+  transition: 0.25s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card__icon {
+  flex-shrink: 0;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  background: #fff4f2;
+  border-radius: 16px;
+}
+
+.payment-card__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b1b1d;
+}
+
+.payment-card__desc {
+  color: #737373;
+  line-height: 1.6;
+}
+
+.payment-card__badge {
+  padding: 5px 10px;
+
+  background: #d84a35;
+  border-radius: 999px;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================
+   DELIVERY INFO
+========================= */
+
+.delivery-info {
+  background: #fff;
+
+  border: 1px solid #ececec;
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.delivery-info__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #efefef;
+}
+
+.delivery-info__row:last-child {
+  border-bottom: none;
+}
+
+.delivery-info__row span {
+  color: #666;
+}
+
+.delivery-info__row strong {
+  color: #1b1b1d;
+  font-weight: 700;
+}
+
+/* =========================
+   TERMS
+========================= */
+
+.payment-terms {
+  display: grid;
+  gap: 14px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.payment-terms li {
+  position: relative;
+
+  padding: 18px 22px 18px 52px;
+
+  background: #fff;
+
+  border: 1px solid #ececec;
+  border-radius: 16px;
+}
+
+.payment-terms li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 20px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #d84a35;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* =========================
+   DISCOUNT TABLE
+========================= */
+
+.discount-table {
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+}
+
+.discount-table__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.discount-table__table thead {
+  background: #1b1b1d;
+}
+
+.discount-table__table th {
+  padding: 18px 24px;
+
+  text-align: left;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.discount-table__table td {
+  padding: 18px 24px;
+
+  border-bottom: 1px solid #efefef;
+
+  color: #1b1b1d;
+
+  text-align: left;
+}
+
+.discount-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.discount-table__table tbody tr:hover {
+  background: #fafafa;
+}
+
+.discount-table__table td:last-child {
+  width: 220px;
+  font-weight: 700;
+}
+
+.green {
+  color: #23a455;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-info__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .discount-table {
+    overflow-x: auto;
+  }
+
+  .discount-table__table {
+    min-width: 600px;
+  }
+
+  .info-page__section {
+    font-size: 24px;
+  }
+}

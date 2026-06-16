@@ -1,0 +1,122 @@
+.catalog-page__title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+/* ── Фильтры ──────────────────────────────────────────────────────────────── */
+.catalog-page__filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.catalog-page__filter {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.catalog-page__filter:hover {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+.catalog-page__filter--active {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
+}
+
+.catalog-page__filter--active:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ── Промо-блок ───────────────────────────────────────────────────────────── */
+.promo-block {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.promo-block__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.78) 0%,
+    rgba(0,0,0,0.35) 60%,
+    transparent 100%
+  );
+}
+
+.promo-block__content {
+  position: relative;
+  z-index: 1;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 480px;
+}
+
+.promo-block__badge {
+  display: inline-block;
+  background: #c0392b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.promo-block__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.promo-block__subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+.promo-block__offer {
+  font-size: 13px;
+  color: #ffd700;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ── Сетка ────────────────────────────────────────────────────────────────── */
+.catalog-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.catalog-page__empty {
+  text-align: center;
+  padding: 60px 0;
+  color: #aaa;
+  font-size: 16px;
+}
